@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  &-text {
+    font-size: 1rem;
+    margin: 2rem;
+  }
+}

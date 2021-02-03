@@ -1,0 +1,23 @@
+<%- include('header.ejs') -%>
+<div class="player">
+    <video class="player-video" controls src="<%= video.video %>"></video>
+</div>
+<div class="category">
+    <h2 class="category-title">Tengd myndbönd</h2>
+    <% video.related.forEach((id) => { %>
+        <div class="video">
+            <a class="video-container" href="<%= "/"+id %>">
+                <div class="video-thumbnail">
+                    <img class="video-image" src="<%= videos[id-1].poster %>">
+                    <p class="video-length"><%= getRuntime(videos[id-1].duration) %></p>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-name"><%= videos[id-1].title %></h3>
+                    <p class="video-createtime"><%= getTimeText(videos[id-1].created) %></p>
+                </div>
+            </a>
+        </div>
+    <% }); %>
+    <hr class="page-break">
+</div>
+<%- include('footer.ejs') -%>

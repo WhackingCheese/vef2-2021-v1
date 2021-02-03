@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: center;
+
+  &-text {
+    @media (min-width: 1290px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 1290px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 860px) {
+      font-size: 1.5rem;
+    }
+  }
+}

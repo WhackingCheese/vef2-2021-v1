@@ -1,0 +1,11 @@
+@import './vars';
+
+.error {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &-message {
+    margin: 0;
+  }
+}

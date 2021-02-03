@@ -1,0 +1,27 @@
+@import './vars';
+
+* {
+  background-color: $background;
+  color: $font-color;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  @media (min-width: 1290px) {
+    max-width: 1290px;
+  }
+
+  @media (max-width: 1290px) {
+    max-width: 860px;
+  }
+
+  @media (max-width: 860px) {
+    max-width: 430px;
+  }
+
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}

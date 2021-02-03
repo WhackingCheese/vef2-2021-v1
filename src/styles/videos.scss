@@ -1,0 +1,70 @@
+@import './vars';
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-title {
+    padding-left: $gutter/2;
+    width: 100%;
+
+    @media (min-width: 860px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 860px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.page-break {
+  border-top: 1px solid #000;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  width: 80%;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+
+  &-video {
+    width: 95%;
+  }
+}
+
+.video {
+  margin-bottom: $margin-bottom;
+  max-width: 400px;
+  padding: 0 $gutter/2;
+
+  &-thumbnail {
+    position: relative;
+  }
+
+  &-image {
+    max-width: 400px;
+  }
+
+  &-length {
+    background-color: $time-color;
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    right: 1rem;
+  }
+
+  &-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.2rem 0;
+  }
+
+  &-createtime {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
