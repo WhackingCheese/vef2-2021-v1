@@ -4,7 +4,7 @@ const express = require('express');
 const videos = require('./src/videos');
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = '*';
 
 const app = express();
 app.use(express.static('public'));
