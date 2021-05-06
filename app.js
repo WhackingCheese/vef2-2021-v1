@@ -1,10 +1,13 @@
 /* eslint-disable no-console */
 const path = require('path');
 const express = require('express');
+const dotenv = require('dotenv');
 const videos = require('./src/videos');
 
-const hostname = '127.0.0.1';
-const port = '*';
+dotenv.config();
+const {
+  PORT: port = 3000,
+} = process.env;
 
 const app = express();
 app.use(express.static('public'));
@@ -83,6 +86,6 @@ app.locals.getRuntime = (n) => {
   return (new Date(n * 1000).toISOString()).substring(15, 19);
 };
 
-app.listen(port, hostname, () => {
-  console.info(`Server runinng at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.info(`Server runinng at http://localhost:${port}/`);
 });
